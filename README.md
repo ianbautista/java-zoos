@@ -428,6 +428,7 @@ Expose the following Endpoint
 * [x] GET /zoos/zoos - returns all zoos with their phone numbers and animals
 * [x] GET /zoos/zoo/{id} - returns all information related to a zoo based on its id
 
+
 ## Stretch goals
 
 * [ ] POST /zoos/zoo - adds a zoo including new telephone number and zoo animal combinations. The Animal Type must already exist.  * In the header return as the location of the newly created zoo POST /zoos/zoo/{id}
