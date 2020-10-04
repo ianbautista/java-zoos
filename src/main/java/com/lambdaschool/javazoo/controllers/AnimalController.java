@@ -1,7 +1,7 @@
 package com.lambdaschool.javazoo.controllers;
 
 import com.lambdaschool.javazoo.views.AnimalZooCount;
-import com.lambdaschool.javazoo.services.AnimalsServices;
+import com.lambdaschool.javazoo.services.AnimalServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +17,12 @@ public class AnimalController
 {
 
     @Autowired
-    AnimalsServices animalsServices;
+    AnimalServices animalServices;
 
     // http://localhost:2019/animals/count
     @GetMapping(value = "/count", produces = "application/json")
     private ResponseEntity<?> getAllAnimals() {
-        List<AnimalZooCount> rtnList = animalsServices.getAnimalZooCount();
+        List<AnimalZooCount> rtnList = animalServices.getAnimalZooCount();
         return new ResponseEntity<>(rtnList, HttpStatus.OK);
     }
 }
